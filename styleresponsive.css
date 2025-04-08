@@ -3,16 +3,30 @@
         background-color: rgb(255, 233, 255);
     }
 
-    header{
-        
-    }
+    nav{
+        flex-flow: column nowrap;
+        gap: 2rem;
 
+        input{
+            width: 70%;
+            height: 3.5rem;
+        }
+    }
     .menu{
         display: none;
 
 
         a{
             display: none;
+        }
+    }
+
+    .container-banner{
+        width: 90%;
+        height: 20rem;
+    
+        img{
+            width: 90%;
         }
     }
 }
