@@ -62,7 +62,7 @@ nav{
     .menu{
         display: none;
         flex-flow: row nowrap;
-        gap: 40px;
+        gap: 20px;
 
         a{
             text-decoration: none;
