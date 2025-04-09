@@ -1,4 +1,4 @@
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 426px) {
     body{
         background-color: rgb(255, 233, 255);
     }
@@ -7,19 +7,28 @@
         flex-flow: column nowrap;
         gap: 2rem;
 
+        #logo-top{
+            width: 15rem;
+        }
+
         input{
             width: 70%;
             height: 3.5rem;
         }
     }
-    .menu{
+    nav .menu{
         display: none;
-
-
-        a{
-            display: none;
-        }
+        flex-flow: column nowrap;
+        gap: 5px;
+        align-items: center;
+        transition: 0.5s;
     }
+    nav .menu-hidden{
+        display: flex;
+        transition: 0.5s;
+    }
+
+
 
     .container-banner{
         width: 90%;
@@ -30,3 +39,5 @@
         }
     }
 }
+
+

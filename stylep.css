@@ -5,7 +5,7 @@
     font-family: sans-serif;
 }
 :root{
-    --primary: pink;
+    --primary: rgb(255, 135, 219);
     --secondary: rgb(148, 0, 136);
     --lightpink: rgb(207, 169, 190);
     --degrade: linear-gradient(0deg, rgba(230,206,242,1) 0%, rgba(126,2,159,1) 100%);
@@ -23,15 +23,21 @@ header{
     width: 100%;
 }
 nav{
+    
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
 
-    h1{
-        color: var(--secondary);
-        font-size: 2.9rem;
+    #logo-top{
+        width: 9rem;
+        transition: 0.8s;
+    }
+    #logo-top:hover{
+        transform: scale(110%);
+        transition: 0.8s;
+        filter: drop-shadow(0px 0px 30px white);
     }
 
     input{
@@ -40,15 +46,21 @@ nav{
         font-size: 20px;
         border-radius: 10px;
     }
-
-    .menu{
+    .menu-hidden{
+        width: 40px;
+        padding: 5px;
+        border-radius: 5px;
         display: flex;
+        filter: drop-shadow(0px 0px 10px white);
+    }
+    .menu{
+        display: none;
         flex-flow: row nowrap;
         gap: 40px;
 
         a{
             text-decoration: none;
-            font-size: 30px;
+            font-size: 2rem;
             color: var(--secondary);
             font-weight: 700;
         }
@@ -136,10 +148,6 @@ main{
 
 
     }
-    img:hover{
-        transform: rotateZ(360deg);
-        transition: 0.5s ease
-    }
 }
 
 footer{
@@ -161,10 +169,5 @@ footer{
     transform: scale(110%);
     transition: 1s;
     box-shadow: 0px 0px 15px var(--secondary);
-}
-body:hover{
-    img{
-    transform: rotateY(180deg);
-
-    }
+    cursor: pointer;
 }
