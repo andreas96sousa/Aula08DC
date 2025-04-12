@@ -5,29 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>teste</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+
+        }
         .divcriada{
             display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
+            flex-flow: row nowrap;
+            justify-content: space-around;
             align-items: center;
-            width: 70%;
-            height: 500px;
-            background-color: blueviolet;
-            margin: 10px 0px;
+            width: 80%;
+            height: 95vh;
+            background-color: white;
+            margin: 10px 10px;
             position: absolute;
             top: 0;
+            left: 9%;
+            box-shadow: 0px 0px 15px black;
+            border-radius: 10px;
+        }
+        .imgCriada{
+            height: 90%;
+            padding: 10px;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 15px pink;
+            border-radius: 15px;
+        }
+        .divDois{
+            background-color: white;
+            width: 30rem;
+            height: 90%;
+            margin: 20px;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0px 0px 15px pink;
+            border-radius: 15px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .button-buy{
+            width: 100%;
+            height: 3rem;
+            border: none;
+            border-radius: 10px;
+            background-color: pink;
+            font-weight: 900;
+            transition: .7s;
+
+        }
+        .button-buy:hover{
+            transform: scale(120%);
+            transition: .7s;
+            width: 80%;
+            background-color: rgb(243, 9, 204);
+            color: white;
+            
         }
     </style>
 </head>
 <body>
-    <h1>title</h1>
-    <p>ohayo minna</p>
+    <h1>Peppa louca</h1>
+    <div class="loucura">
+    </div>
     <button>Make that</button>
     <h2>subtitle</h2>
 </body>
 <script>
     let mensagem = document.querySelector("p")
     let button = document.querySelector("button")
+    let divLoucura = document.querySelector(".loucura")
+    let title = document.querySelector("h1")
     
     button.addEventListener("click", teste)
     
@@ -35,11 +87,38 @@
     function teste(){
         let novadiv = document.createElement("div")
         novadiv.classList.add("divcriada")
-        novadiv.textContent = "Criei poarr"
-        document.body.appendChild(novadiv)
+        divLoucura.appendChild(novadiv)
         
+        let imgCriada = document.createElement("img")
+        imgCriada.setAttribute("src", "media/peppa01.png")
+        imgCriada.classList.add("imgCriada")
+        novadiv.appendChild(imgCriada)
+
+        let divDois = document.createElement("div")
+        divDois.classList.add("divDois")
+        novadiv.appendChild(divDois)
+
+        let divDoisTitle = document.createElement("h1")
+        divDoisTitle.innerText = title.innerText.toLocaleUpperCase()
+        divDois.appendChild(divDoisTitle)
+        
+        let divDoisLorem = document.createElement("p")
+        divDoisLorem.innerText = "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+        divDois.appendChild(divDoisLorem)
+
+        let divDoisPrice = document.createElement("h2")
+        divDoisPrice.innerText = "R$ 21.321,00"
+        divDois.appendChild(divDoisPrice)
+
+        let divDoisBuybtn = document.createElement("button")
+        divDoisBuybtn.classList.add("button-buy")
+        divDoisBuybtn.innerText = `COMPRE SUA ${title.innerText.toLocaleUpperCase()} AGORA!`
+        divDois.appendChild(divDoisBuybtn)
+
+
+
+
         novadiv.addEventListener("click", divremove)
-        
         
     }
     function divremove(){
