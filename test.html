@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <style>
+        .divcriada{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            height: 500px;
+            background-color: blueviolet;
+            margin: 10px 0px;
+            position: absolute;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>title</h1>
+    <p>ohayo minna</p>
+    <button>Make that</button>
+    <h2>subtitle</h2>
+</body>
+<script>
+    let mensagem = document.querySelector("p")
+    let button = document.querySelector("button")
+    
+    button.addEventListener("click", teste)
+    
+    
+    function teste(){
+        let novadiv = document.createElement("div")
+        novadiv.classList.add("divcriada")
+        novadiv.textContent = "Criei poarr"
+        document.body.appendChild(novadiv)
+        
+        novadiv.addEventListener("click", divremove)
+        
+        
+    }
+    function divremove(){
+        let novadiv = document.querySelector(".divcriada")
+        novadiv.remove();
+    }
+    
+</script>
+</html>
