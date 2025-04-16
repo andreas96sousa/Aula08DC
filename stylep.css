@@ -41,6 +41,9 @@ header{
     color: rgb(106, 106, 248);
     background-color: rgb(106, 106, 248);
 }
+.mude{
+    width: 40px;
+}
 nav{
     
     display: flex;
@@ -72,6 +75,7 @@ nav{
         display: flex;
         filter: drop-shadow(0px 0px 10px white);
     }
+    
     .menu{
         display: none;
         flex-flow: row nowrap;
@@ -189,4 +193,13 @@ footer{
     transition: 1s;
     box-shadow: 0px 0px 15px var(--secondary);
     cursor: pointer;
+}
+.btn-primary{
+    background-color: var(--secondary) !important;
+}
+.btn-primary:hover{
+    background-color: var(--primary) !important;
+}
+hr{
+    border: 2px solid var(--secondary) !important;
 }

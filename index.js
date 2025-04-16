@@ -6,25 +6,25 @@ let cards = document.querySelectorAll(".cards")
 menu.addEventListener("click", abrirmenu)
 menu.addEventListener("click", trocarcordois)
 
-function trocarcordois(selected){
-    let divComprar = document.createElement("div")
-    divComprar.classList.add("buy-page")
-    document.body.appendChild(divComprar)
+// function trocarcordois(selected){
+//     let divComprar = document.createElement("div")
+//     divComprar.classList.add("buy-page")
+//     document.body.appendChild(divComprar)
 
-    let fechar = document.createElement("h1")
-    fechar.classList.add("fechar-aba")
-    fechar.textContent = "X"
-    divComprar.appendChild(fechar)
+//     let fechar = document.createElement("h1")
+//     fechar.classList.add("fechar-aba")
+//     fechar.textContent = "X"
+//     divComprar.appendChild(fechar)
 
 
-    let fecharAba = document.querySelector(".fechar-aba")
-    fecharAba.addEventListener("click", fecharaAba)
+//     let fecharAba = document.querySelector(".fechar-aba")
+//     fecharAba.addEventListener("click", fecharaAba)
 
-}
+// }
 
-for(let i = 0; i <= cards.length; i++ ){
-    cards[i].addEventListener("click", trocarcordois)
-}
+// for(let i = 0; i <= cards.length; i++ ){
+//     cards[i].addEventListener("click", trocarcordois)
+// }
 
 
 function abrirmenu(){
@@ -38,6 +38,24 @@ function abrirmenu(){
     }
 }
 
-function fecharaAba(){
-    divComprar.remove()
-}
+// function fecharaAba(){
+//     let divComprar = document.querySelector("buy-page")
+//     divComprar.remove()
+// }
+
+
+
+
+// let minus = document.querySelector(".minus")
+// let pluis = document.querySelector(".pluis")
+// let inputN = document.querySelector(".inputN")
+
+// pluis.addEventListener("click", aumentar)
+// minus.addEventListener("click", diminuir)
+
+// function aumentar(){
+//     inputN.value++
+// }
+// function diminuir(){
+
+// }

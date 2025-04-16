@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylep.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styleresponsive.css" />
+    <link rel="shortcut icon" href="media/favicon.png" type="image/png" />
+
+    <title>Carrinho</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="media/logo.png" alt="LOGOMARCA" id="logo-top" />
+        <input
+          type="search"
+          placeholder="Encontre aqui sua Peppa Favorita"
+          name="search-nav"
+          id="search-nav"
+        />
+
+        <img src="media/favicon.png" alt="menu" class="menu-hidden" />
+        <div class="menu">
+          <a href="index.html">HOME</a>
+          <a href="cart.html">CARRINHO</a>
+          <a href="login.html">LOGIN</a>
+        </div>
+      </nav>
+    </header>
+    <div class="blue">.</div>
+
+    <main>
+      <h1>CARRINHO</h1>
+      <div class="container text-center">
+        <table class="p-2 table table-hover table-striped">
+          <thead class="w-100">
+            <tr class="justify-content-evenly">
+              <th scope="col">Id</th>
+              <th scope="col">Imagem</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Quantidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <th scope="row">1</th>
+              <td>
+                <img src="media/peppa01.png" alt="" class="mude" />
+              </td>
+              <td>Simple Peppa</td>
+              <td>
+                <input type="number" class="w-auto p-2" />
+              </td>
+            </tr>
+            <tr class="">
+              <th scope="row">2</th>
+              <td>
+                <img src="media/peppa02.png" alt="" class="mude" />
+              </td>
+              <td>Birthday Peppa</td>
+              <td>
+                <input type="number" class="w-auto p-2" />
+              </td>
+            </tr>
+            <tr class="">
+              <th scope="row">3</th>
+              <td>
+                <img src="media/peppa03.png" alt="" class="mude" />
+              </td>
+              <td>Daddy Pig</td>
+              <td>
+                <input type="number" class="w-auto p-2" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="container d-flex flex-row">
+        <div
+          class="container text-center d-flex flex-column align-items-center"
+        >
+          <h2 class="text-center mb-5">Dados para entrega:</h2>
+          <form class="mb-3 text-start w-75">
+            <div class="mb-3">
+              <label for="cep" class="form-label">CEP</label>
+              <input type="number" class="form-control" id="cep" />
+              <div id="cep" class="form-text">
+                Insira seu CEP(Somente números)
+              </div>
+            </div>
+            <hr />
+            <div class="mb-3">
+              <label for="rua" class="form-label">Rua</label>
+              <input type="text" class="form-control" id="rua" />
+              <div id="rua" class="form-text">
+                Nome da sua rua(Sem os números)
+              </div>
+            </div>
+            <hr />
+            <div class="mb-3">
+              <label for="num" class="form-label">Nº</label>
+              <input type="number" class="form-control" id="num" />
+              <div id="num" class="form-text">
+                Número da sua casa(Somente números)
+              </div>
+            </div>
+            <hr />
+            <div class="mb-3">
+              <label for="cidade" class="form-label">Cidade</label>
+              <input type="text" class="form-control" id="cidade" />
+              <div id="cidade" class="form-text">Nome da sua Cidade</div>
+            </div>
+            <hr />
+            <div class="mb-3">
+              <label for="uf" class="form-label">UF</label>
+              <input type="uf" class="form-control" id="uf" />
+              <div id="uf" class="form-text">Nome do seu Estado</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">ENTREGAR</button>
+          </form>
+        </div>
+
+        <div
+          class="container text-center d-flex flex-column align-items-center"
+        >
+          <h2 class="text-center mb-5">Dados para pagamento:</h2>
+          <form class="mb-3 text-start w-75">
+            <div class="mb-3">
+              <label for="cartao" class="form-label">Número do Cartão</label>
+              <input type="number" class="form-control" id="cartao" />
+              <div id="cartao" class="form-text">
+                Número do Cartão (Somente números)
+              </div>
+            </div>
+            <hr />
+            <div class="mb-3">
+              <label for="vencimento" class="form-label">Vencimento</label>
+              <input type="date" class="form-control" id="vencimento" />
+              <div id="vencimento" class="form-text">
+                Vencimento (Somente os números)
+              </div>
+            </div>
+            <hr />
+            <div class="mb-3">
+              <label for="cvv" class="form-label">CVV</label>
+              <input type="number" maxlength="999" class="form-control" id="cvv" />
+              <div id="cvv" class="form-text">
+                Número de três digitos (Somente números)
+              </div>
+            </div>
+            <hr />
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nome" />
+              <div id="nome" class="form-text">Insira seu nome de acordo com o cartão</div>
+            </div>
+            <hr>
+            <div class="mb-3">
+            <label for="select" class="form-label">Quantidade de Parcelas</label>
+                <select class="form-select">
+                    <option selected></option>
+                    <option value="1">1x - Sem juros</option>
+                    <option value="2">2x - Sem juros</option>
+                    <option selected value="3">3x - Juros de 1500%</option>
+                </select>
+                <div id="nome" class="form-text">Escolha a quantidade de parcelas</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">COMPRAR</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span> All Rights Reserved. </span>
+    </footer>
+  </body>
+
+  <script src="index.js"></script>
+</html>
