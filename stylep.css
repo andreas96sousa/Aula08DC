@@ -107,22 +107,18 @@ main{
     justify-content: center;
     align-items: center;
 }
-
+.carrousel-carlos{
+    border-radius: 25px;
+}
 .container-banner{
-    width: 90%;
-    height: 400px;
-    overflow: hidden;
+    height: 300px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     background-color: var(--lightpink);
     border: 5px solid var(--primary);
-    border-radius: 30px;
 
-    img{
-        width: 50%;
-    }
 }
 
 .products{
@@ -135,7 +131,7 @@ main{
     align-items: center;
 }
 .cards{
-    height: 300px;
+    height: auto;
     width: 200px;
     padding: 20px;
     border: 3px solid var(--primary);
@@ -144,11 +140,8 @@ main{
     flex-flow: column nowrap;
     gap: 5px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: rgb(255, 255, 255);
-
-    
-    
     h3{
         font-size: 1.5rem;
     }
